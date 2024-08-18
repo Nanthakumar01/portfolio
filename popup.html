@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>popup</title>
+        <link rel="stylesheet" href="popup.css">
+        <script src="popup.js"></script>
+        
+       
+        
+       
+    </head>
+    <body>
+        <div class="navbar">
+            <h1>bookskey</h1>
+        </div>
+       <div class="container">
+        <div class="book-container">
+            <h2>hell or heaven</h2>
+            <h5>nandy</h5>
+            <p>If your choice goto hell or heaven</p>
+            <button onclick="deletebook(event)">delete</button>
+        </div>
+       </div>
+       
+       <div class="popup-overlay"></div>
+       <div class="popup-box">
+        <h2>Add Book</h2>
+        <form>
+            <input type="text" placeholder="book title" id="book-title-input">
+            <input type="text" placeholder="book author" id="book-author-input">
+            <textarea placeholder="short description" id="book-description-input"></textarea>
+          <button id="add-book">add</button>       
+          <button id="cancel-popup">cancel</button>       
+        </form>
+       </div>
+       
+       <button class="add-button" id="add-popup-button">+</button>
+    </body>
+    <script src="popup.js"></script>
+    
+  
+</html>
