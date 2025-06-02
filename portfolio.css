@@ -316,28 +316,82 @@ img{
 .skill_python{
     width: 80%;
 }
-.project{
-    text-align: center;
-}
+ 
+           /*projects*/
+
 .project_container{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
     row-gap: 2rem;
-    width: fit-content;
+    column-gap: 2rem;
 }
+.project_item{
+    position: relative;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 25px rgba(14 ,36 ,49 , 0.15);
+    overflow: hidden;
+}
+
 .project_img{
     box-shadow: 0 4px 20px rgba(14,36,49,0.15);
     border-radius: 0.5rem;
     overflow: hidden;
-    
+    position: relative;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 .project_img img{
     transition: 1s;
     cursor: pointer;
+
 }
 .project_img img:hover{
     transform: scale(1.1);
 }
 
+
+/*certificates*/
+
+
+
+
+.certificates_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.certificate_gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.certificate_item {
+    text-align: center;
+    max-width: 250px;
+}
+
+.certificate_img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.certificate_item p {
+    font-size: 14px;
+    color: #333;
+}
+
 /*contact*/
+
 .control_input{
     width: 100%;
     font-size: var(--normal-font-size);
@@ -391,8 +445,9 @@ img{
 }
 
 @media screen and (min-width:768px){
+   
     body{
-        margin: 0;
+        margin: var(--header-height) 0 0 0;
     }
     .section{
         padding-top: 4rem;
@@ -448,7 +503,7 @@ img{
         width: 100%;
     }
     .about_container,.skills_container{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
         align-items: center;
         text-align: initial;
     }
@@ -457,9 +512,10 @@ img{
     }
     .project_container{
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
+        grid-template-rows: auto;
         column-gap: 2rem;
     }
+
     .contact_form{
         width: 400px;
 
@@ -469,6 +525,11 @@ img{
     }
 
 }
+
+  
+                      /*....1024px....*/
+
+
 @media screen and (min-width:1024px){
     .bd_grid{
         margin-left: auto;
@@ -486,89 +547,90 @@ body {
     color: black;
 }
 
-.contact-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #1e1e1e;
+.project_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;  
+        gap: 2.5rem 2.5rem;
+        margin-bottom: 4rem;
+        padding-bottom: 0;
+    }
+.project_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-.contact-section h2 {
-    color: orange;
+.project_item h3 {
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
-
-.contact-section p {
-    margin-bottom: 30px;
-    font-size: 18px;
-    color: #f1f1f1;
+.project_item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
 }
+.project_item a {
+    text-decoration: none;
+    color: #2e4eff;
+    font-weight: bold;
+}
+.project_item a:hover {
+    text-decoration: underline;
+}
+.certificates_container {
+        margin-top: 4rem;
+    }
 
-.contact-container {
+
+.contact_container {
+    text-align: center;
+    padding: 50px 20px;
     max-width: 600px;
     margin: 0 auto;
 }
 
-.contact-item {
-    margin: 15px 0;
-}
-.contact-item p {
-   
-    background-color: #8e44ad;
-    color:white;
-    font-size: 16px;
-    font-weight: bold;
-
-}
-
-.contact-link {
-    text-decoration: none;
-    background-color: #8e44ad;
-    color: #fff;
-    padding: 10px 20px;
-    display: inline-block;
-    border-radius: 8px;
-    font-size: 18px;
-}
-
-.contact-link:hover {
-    background-color: #6c3483;
-}
-
-.contact-item span {
-    font-weight: bold;
-}
-
-p {
-    margin: 10px 0;
-}
-.certificates_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.certificate_gallery {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.certificate_item {
-    text-align: center;
-    max-width: 250px;
-}
-
-.certificate_img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.section-title {
+    color: #2e4eff;
     margin-bottom: 10px;
 }
 
-.certificate_item p {
-    font-size: 14px;
-    color: #333;
+.contact_form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.send-button {
+    background-color:#2e4eff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #1a3ed7;
 }
